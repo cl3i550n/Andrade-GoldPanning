@@ -1,17 +1,17 @@
 Config                      = {}
 
 -- Language setting - English | Portuguese_PT | Portuguese_BR | French | German | Spanish
-Config.Lang                 = "Portuguese_BR"
+Config.Lang                 = "English"
 
 Config.Webhook              = ""
 
-Config.ItemToPanning        = "gold_pan"                 -- Same of DB
+Config.ItemToPanning        = "gold_pan" -- Same of DB
 
-Config.EnableLicense = true
-Config.ItemLicenseToPanning = "gold_panning_license"     -- Same of DB
+Config.EnableLicense        = true
+Config.ItemLicenseToPanning = "gold_panning_license" -- Same of DB
 
 -- Item receiving settings
-Config.receiveItem          = 99 -- Threshold number; receive item if random number is below this
+Config.receiveItem          = 50  -- Threshold number; receive item if random number is below this
 Config.chanceGettingItem    = 100 -- Chance of getting an item, as a percentage
 -- List of possible items to receive
 Config.items                = {
