@@ -1,21 +1,20 @@
 local VORPcore = exports.vorp_core:GetCore()
 
-Inventory = exports.vorp_inventory:vorp_inventoryApi()
-
 local T = Translation.Langs[Config.Lang]
 
 Citizen.CreateThread(function()
     Citizen.Wait(2000)
-    Inventory.RegisterUsableItem(Config.ItemToPanning, function(data)
+    exports.vorp_inventory:registerUsableItem(Config.ItemToPanning, function(data)
         local src = data.source
-        local hasLicense = Inventory.getItem(src, Config.ItemLicenseToPanning)
+        local hasLicense = exports.vorp_inventory:getItem(src, Config.ItemLicenseToPanning)
 
         if Config.EnableLicense then
             if not hasLicense then
-                VORPcore.NotifyRightTip(src, T.neddLicense, 4000)
+                VORPcore.NotifyRightTip(src, T.needLicense, 4000)
                 return
             end
         end
+        print('Passo Aqui')
 
         TriggerClientEvent('panning:client:StartGoldPanning', src)
     end)
@@ -30,8 +29,8 @@ AddEventHandler("panning:server:RewardGoldPanning", function()
     if chance < Config.receiveItem then
         local chanceToReceived = math.random(1, #Config.items)
         local count = 1
-        local canCarry = Inventory.canCarryItems(src, count)
-        local canCarry2 = Inventory.canCarryItem(src, Config.items[chanceToReceived].name, count)
+        local canCarry = exports.vorp_inventory:canCarryItems(src, count)
+        local canCarry2 = exports.vorp_inventory:canCarryItem(src, Config.items[chanceToReceived].name, count)
 
         if not canCarry then
             return VORPcore.NotifyRightTip(src, T.invFull, 4000)
@@ -50,7 +49,7 @@ end)
 
 function giveMiningReward(src, Character, itemName, quantity, message)
     local userName = Character.firstname .. " " .. Character.lastname
-    Inventory.addItem(src, itemName, quantity)
+    exports.vorp_inventory:addItem(src, itemName, quantity)
     VORPcore.NotifyRightTip(src, message, 4000)
     sendDiscordMessage(userName ..
     " " .. T.Webhook.found .. " " .. quantity .. " " .. itemName .. " " .. os.date("%H:%M:%S - %d/%m/%Y") .. "\r")

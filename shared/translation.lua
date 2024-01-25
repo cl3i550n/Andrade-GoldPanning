@@ -9,7 +9,7 @@ Translation.Langs = {
     onlyWater = "I need to go to a nearby river or lake.",
     haveLuck = "Let's see if I'm lucky...",
     findAny = "So much mud... but it seems I found something...",
-    neddLicense = "Your need license to gold panning.",
+    needLicense = "Your need license to gold panning.",
     Webhook = {
       found = "Found",
     }
@@ -22,7 +22,7 @@ Translation.Langs = {
     onlyWater = "Preciso ir a um rio ou lago próximo.",
     haveLuck = "Vamos ver se tenho sorte...",
     findAny = "Tanta lama.. mas parece que encontrei algo...",
-    neddLicense = "Você precisa de uma licença para garimpar.",
+    needLicense = "Você precisa de uma licença para garimpar.",
     Webhook = {
       found = "Encontrou",
     }
@@ -35,6 +35,7 @@ Translation.Langs = {
     onlyWater = "Preciso ir em um rio ou lago próximo.",
     haveLuck = "Vamos ver se tenho sorte...",
     findAny = "Quanta lama.. mas parece que encontrei algo...",
+    needLicense = "Você precisa de uma licença para garimpar.",
     Webhook = {
       found = "Encontrou",
     }

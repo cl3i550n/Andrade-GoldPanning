@@ -1,11 +1,11 @@
 Config                      = {}
 
 -- Language setting - English | Portuguese_PT | Portuguese_BR | French | German | Spanish
-Config.Lang                 = "English"
+Config.Lang                 = "Portuguese_BR"
 
 Config.Webhook              = ""
 
-Config.ItemToPanning        = "gold_pan" -- Same of DB
+Config.ItemToPanning        = "goldpan" -- Same of DB
 
 Config.EnableLicense        = true
 Config.ItemLicenseToPanning = "gold_panning_license" -- Same of DB
