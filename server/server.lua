@@ -14,7 +14,6 @@ Citizen.CreateThread(function()
                 return
             end
         end
-        print('Passo Aqui')
 
         TriggerClientEvent('panning:client:StartGoldPanning', src)
     end)
@@ -26,6 +25,7 @@ AddEventHandler("panning:server:RewardGoldPanning", function()
     local User = VORPcore.getUser(src)
     local Character = User.getUsedCharacter
     local chance = math.random(1, Config.chanceGettingItem)
+
     if chance < Config.receiveItem then
         local chanceToReceived = math.random(1, #Config.items)
         local count = 1

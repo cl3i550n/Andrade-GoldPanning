@@ -22,7 +22,6 @@ AddEventHandler('panning:client:StartGoldPanning', function()
     end
 end)
 
--- Função para executar o processo de garimpagem
 function performGoldPanning(playerPed)
     attachMiningPanAndAnimate(playerPed)
 
