@@ -21,5 +21,5 @@ dependencies {
 }
 
 author '<4NDR4D3/>'
-description 'Andrade-GoldPanning'
+description 'Andrade-GoldPanning | Join https://discord.gg/fBAQTBRvat'
 version '1.0.0'
